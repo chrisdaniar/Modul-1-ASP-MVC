@@ -17,7 +17,6 @@ namespace asp_mvc_2.Models.DB
         public LOOKUPRole()
         {
             this.SYSUserRoles = new HashSet<SYSUserRole>();
-            this.SYSUserRoles1 = new HashSet<SYSUserRole>();
         }
     
         public int LOOKUPRoleID { get; set; }
@@ -29,6 +28,5 @@ namespace asp_mvc_2.Models.DB
         public Nullable<System.DateTime> RowModifiedDateTime { get; set; }
     
         public virtual ICollection<SYSUserRole> SYSUserRoles { get; set; }
-        public virtual ICollection<SYSUserRole> SYSUserRoles1 { get; set; }
     }
 }

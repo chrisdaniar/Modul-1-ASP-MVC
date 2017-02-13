@@ -10,6 +10,7 @@ namespace asp_mvc_2.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult SignUp(UserSignUpView USV)
         {
@@ -21,37 +22,42 @@ namespace asp_mvc_2.Controllers
                     UM.AddUserAccount(USV);
                     FormsAuthentication.SetAuthCookie(USV.FirstName, false);
                     return RedirectToAction("Welcome", "Home");
+
                 }
                 else
                     ModelState.AddModelError("", "Login Name already taken.");
             }
             return View();
         }
-
-        public ActionResult LogIn() {
+        public ActionResult LogIn()
+        {
             return View();
         }
+
         [HttpPost]
-        public ActionResult LogIn(UserLoginView ULV, string returnUrl) {
-            if (ModelState.IsValid) {
+        public ActionResult LogIn(UserLoginView ULV, string returnUrl)
+        {
+            if (ModelState.IsValid)
+            {
                 UserManager UM = new UserManager();
                 string password = UM.GetUserPassword(ULV.LoginName);
 
                 if (string.IsNullOrEmpty(password))
-                    ModelState.AddModelError("", "The user login or password provided is incorrect.");
-                
+                    ModelState.AddModelError("", "The user login or password is incorrect.");
                 else {
-                if (ULV.Password.Equals(password)) {
-                FormsAuthentication.SetAuthCookie(ULV.LoginName, false);
-                return RedirectToAction("Welcome", "Home");
-                }
-                else {
-                ModelState.AddModelError("", "The password provided is incorrect.");
+                    if (ULV.Password.Equals(password))
+                    {
+                        FormsAuthentication.SetAuthCookie(ULV.LoginName, false); return RedirectToAction("Welcome", "Home");
+                    }
+                    else
+                    {
+                    ModelState.AddModelError("", "The password provided is incorrect.");
+                    }
                 }
             }
-        }
-        // If we got this far, something failed, redisplay form
-        return View(ULV);
+
+            // If we got this far, something failed, redisplay form
+            return View(ULV);
         }
         [Authorize]
         public ActionResult SignOut()
@@ -59,6 +65,6 @@ namespace asp_mvc_2.Controllers
             FormsAuthentication.SignOut();
             return RedirectToAction("Index", "Home");
         }
+        }
     }
       
-}

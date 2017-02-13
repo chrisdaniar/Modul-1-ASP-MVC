@@ -13,10 +13,10 @@ namespace asp_mvc_2.Models.DB
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DemoDBEntities : DbContext
+    public partial class DemoDBEntities1 : DbContext
     {
-        public DemoDBEntities()
-            : base("name=DemoDBEntities")
+        public DemoDBEntities1()
+            : base("name=DemoDBEntities1")
         {
         }
     
@@ -29,9 +29,5 @@ namespace asp_mvc_2.Models.DB
         public virtual DbSet<SYSUser> SYSUsers { get; set; }
         public virtual DbSet<SYSUserProfile> SYSUserProfiles { get; set; }
         public virtual DbSet<SYSUserRole> SYSUserRoles { get; set; }
-
-        public System.Data.Entity.DbSet<asp_mvc_2.Models.ViewModel.UserSignUpView> UserSignUpViews { get; set; }
-
-        public System.Data.Entity.DbSet<asp_mvc_2.Models.ViewModel.UserLoginView> UserLoginViews { get; set; }
     }
 }

@@ -4,16 +4,14 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="fcaaa99d324a4122adeec51cd46f73b9" Name="Diagram1">
+      <Diagram DiagramId="1027446a8a664f268f40f4b67378ce17" Name="Diagram1">
         <EntityTypeShape EntityType="DemoDBModel.LOOKUPRole" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DemoDBModel.SYSUser" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="DemoDBModel.SYSUserProfile" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DemoDBModel.SYSUserProfile" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DemoDBModel.SYSUserRole" Width="1.5" PointX="6" PointY="4.5" IsExpanded="true" />
-        <AssociationConnector Association="DemoDBModel.FK__SYSUserRo__LOOKU__34C8D9D1" ManuallyRouted="false" />
-        <AssociationConnector Association="DemoDBModel.FK__SYSUserRo__LOOKU__37A5467C" ManuallyRouted="false" />
-        <AssociationConnector Association="DemoDBModel.FK__SYSUserPr__SYSUs__2F10007B" ManuallyRouted="false" />
-        <AssociationConnector Association="DemoDBModel.FK__SYSUserRo__SYSUs__35BCFE0A" ManuallyRouted="false" />
-        <AssociationConnector Association="DemoDBModel.FK__SYSUserRo__SYSUs__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="DemoDBModel.FK__SYSUserRo__LOOKU__21B6055D" ManuallyRouted="false" />
+        <AssociationConnector Association="DemoDBModel.FK__SYSUserPr__SYSUs__1BFD2C07" ManuallyRouted="false" />
+        <AssociationConnector Association="DemoDBModel.FK__SYSUserRo__SYSUs__22AA2996" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
